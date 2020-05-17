@@ -1,0 +1,256 @@
+---
+- name: 'Boardroom'
+  manufacturer: 'Hyperion'
+  type: 'Submachine Gun'
+  range: '35/70'
+  reloadSpeed: '1 bonus action'
+  damage: ['1d4', '1d4', '1d6', '1d6', '1d6',
+           '1d8', '1d8', '1d8', '1d10', '1d10',
+           '1d10', '2d6', '2d6', '2d6', '2d10',
+           '2d10', '2d10', '2d12', '2d12', '2d12']
+  clipSize: [8, 8, 9, 9, 9,
+             10, 10, 10, 10, 11,
+             11, 11, 11, 11, 12,
+             12, 12, 12, 12, 12]
+  description:
+    - >
+      Consecutive attacks with this weapon improve its accuracy; for each attack roll after the first, add +1 to the
+      attack roll up to a maximum bonus of +5. Reloading or not firing for 1 round resets this bonus.
+    - >
+      Additionally, as a free action, you can project or retract this weapon's shield which takes damage on top of
+      your shield, armor, and health; this shield has a recharge delay of 2 rounds, a capacity of
+      ${shieldCapacity[level - 1]} SP, and a recharge rate of ${rechargeRate[level - 1]} SP per turn. However, while
+      the shield is projected, your movement speed is reduced by half.
+  shieldCapacity: [10, 11, 12, 13, 15,
+                   17, 20, 23, 26, 29,
+                   32, 36, 40, 45, 50,
+                   55, 60, 65, 70, 75]
+  rechargeRate: [3, 3, 3, 4, 4,
+                 4, 5, 5, 6, 6,
+                 7, 7, 8, 8, 9,
+                 9, 10, 10, 11, 12]
+- name: 'Powerplay'
+  manufacturer: 'Hyperion'
+  type: 'Submachine Gun'
+  range: '45/90'
+  reloadSpeed: '1 bonus action'
+  damage: ['1d4', '1d4', '1d6', '1d6', '2d4',
+           '2d4', '1d10', '1d10', '3d4', '3d4',
+           '4d4', '4d4', '3d6', '3d6', '5d4',
+           '5d4', '5d4', '4d6', '4d6', '4d6']
+  clipSize: [7, 7, 7, 7, 8,
+             8, 8, 8, 9, 9,
+             9, 9, 10, 10, 10,
+             10, 11, 11, 11, 11]
+  description:
+    - >
+      Consecutive attacks with this weapon improve its accuracy; for each attack after the first, add +2 to the attack
+      roll up to a maximum bonus of +4. Reloading or not firing for 1 round resets this bonus.
+    - >
+      Additionally, as a free action, you can project or retract this weapon's shield which takes damage on top of
+      your shield, armor, and health; this shield has a recharge delay of 2 rounds, a capacity of
+      ${shieldCapacity[level - 1]} SP, and a recharge rate of ${rechargeRate[level - 1]} SP per turn. However, while
+      the shield is projected, your movement speed is reduced by half.
+    - >
+      This shield can also absorb ammunition back into its clip. When an attack hits the shield, roll a d100. On a
+      roll of ${91 - level} or higher, the shield takes no damage, and a bullet is added back to its clip.
+  shieldCapacity: [4, 5, 6, 7, 9,
+                   11, 13, 15, 17, 20,
+                   24, 27, 29, 32, 35,
+                   37, 39, 43, 47, 50]
+  rechargeRate: [1, 1, 2, 2, 3,
+                 3, 4, 4, 5, 5,
+                 5, 6, 6, 7, 7,
+                 8, 9, 10, 11, 12]
+- name: 'Collaborator'
+  manufacturer: 'Hyperion'
+  type: 'Shotgun'
+  range: '25/50'
+  reloadSpeed: '1 action'
+  damage: ['1d10', '1d10', '1d10', '1d12', '1d12',
+           '1d12', '2d8', '2d8', '2d10', '2d10',
+           '2d10', '3d8', '3d8', '3d10', '3d10',
+           '4d8', '4d8', '3d12', '3d12', '3d12']
+  clipSize: [4, 4, 4, 4, 5,
+             5, 5, 6, 6, 6,
+             7, 7, 7, 7, 8,
+             8, 8, 9, 9, 9]
+  description:
+    - >
+      Consecutive attacks with this weapon improve its accuracy; for each attack after the first, add +1 to the attack
+      roll up to a maximum bonus of +3. Reloading or not firing for 1 turn resets this bonus.
+    - >
+      Additionally, as a free action, you can project or retract this weapon's shield which takes damage on top of
+      your shield, armor, and health; this shield has a recharge delay of 3 rounds, a capacity of
+      ${shieldCapacity[level - 1]} SP, and a recharge rate of ${rechargeRate[level - 1]} SP per turn. However, while
+      the shield is projected, your movement speed is reduced by half.
+  shieldCapacity: [10, 11, 12, 13, 15,
+                   17, 20, 23, 26, 29,
+                   32, 36, 40, 45, 50,
+                   55, 60, 65, 70, 75]
+  rechargeRate: [3, 3, 3, 4, 4,
+                 4, 5, 5, 6, 6,
+                 7, 7, 8, 8, 9,
+                 9, 10, 10, 11, 12]
+- name: 'Downsizer'
+  manufacturer: 'Hyperion'
+  type: 'Shotgun'
+  range: '35/70'
+  reloadSpeed: '1 action'
+  damage: ['1d6', '1d6', '1d8', '1d8', '1d10',
+           '1d10', '1d12', '1d12', '2d8', '2d8',
+           '3d6', '3d6', '2d10', '2d10', '2d12',
+           '2d12', '3d10', '3d10', '4d8', '4d8']
+  clipSize: [5, 5, 6, 6, 6,
+             7, 7, 7, 8, 8,
+             9, 9, 10, 10, 10,
+             11, 11, 12, 12, 12]
+  description:
+    - >
+      Consecutive attacks with this weapon improve its accuracy; for each attack roll after the first, add +1 to the
+      attack roll up to a maximum bonus of +3. Reloading or not firing for 1 turn resets this bonus.
+    - >
+      As a free action, you can project or retract this weapon's shield which takes damage on top of your shield,
+      armor, and health; this shield has a recharge delay of 2 rounds, a capacity of ${shieldCapacity[level - 1]} SP,
+      and a recharge rate of ${rechargeRate[level - 1]} SP per turn. However, while the shield is projected, your
+      movement speed is reduced by half.
+    - >
+      Additionally, when an attacker deals damage to this shield, make an attack roll with this weapon against them.
+      On a hit, the shield takes only half the damage, and the other half is reflected back to the attacker.
+  shieldCapcity: [4, 5, 6, 7, 9,
+                  11, 13, 15, 17, 20,
+                  24, 27, 32, 35, 40,
+                  45, 48, 52, 57, 60]
+  rechargeRate: [1, 1, 2, 2, 2,
+                 3, 3, 3, 3, 3,
+                 4, 4, 4, 5, 5,
+                 6, 7, 8, 9, 10]
+- name: 'Outsourcer'
+  manufacturer: 'Hyperion'
+  type: 'Shotgun'
+  range: '20/40'
+  reloadSpeed: '1 action'
+  damage: ['2d4', '2d4', '2d4', '1d10', '1d10',
+           '1d10', '3d4', '3d4', '3d4', '4d4',
+           '4d4', '4d4', '5d4', '5d4', '4d6',
+           '4d6', '7d4', '7d4', '5d6', '5d6']
+  clipSize: [4, 4, 4, 5, 5,
+             6, 6, 6, 7, 7,
+             8, 8, 8, 9, 9,
+             10, 10, 11, 11, 11]
+  description:
+    - >
+      Consecutive attacks with this weapon improve its accuracy; for each attack after the first, add +1 to the attack
+      roll up to a maximum bonus of +3. Reloading or not firing for 1 round resets this bonus.
+    - >
+      As a free action, you can project or retract this weapon's shield which takes damage on top of your shield,
+      armor, and health; this shield has a recharge delay of 3 rounds, a capacity of ${shieldCapacity[level - 1]} SP,
+      and a recharge rate of ${rechargeRate[level - 1]} SP per turn. However, while the shield is projected, your
+      movement speed is reduced by half.
+    - >
+      Additionally, this shield absorbs a quarter of incoming damage as an "amp" bonus to be added to this weapon's
+      next attack. If the shield is withdrawn or breaks, the bonus is lost, and only one bonus can be stored at a time.
+  shieldCapacity: [4, 5, 7, 8, 9,
+                   10, 12, 15, 17, 19,
+                   22, 25, 27, 29, 32,
+                   35, 37, 40, 42, 44]
+  rechargeRate: [1, 1, 2, 2, 2,
+                 2, 3, 3, 3, 3,
+                 4, 4, 5, 5, 6,
+                 7, 7, 8, 8, 9]
+- name: 'Entrepreneur'
+  manufacturer: 'Hyperion'
+  type: 'Sniper Rifle'
+  range: '180/360'
+  reloadSpeed: '2 actions'
+  damage: ['1d12', '1d12', '1d12', '2d8', '2d8',
+           '2d8', '3d6', '2d10', '2d10', '3d8',
+           '3d8', '3d8', '3d10', '3d10', '3d12',
+           '3d12', '4d10', '4d10', '7d6', '7d6']
+  clipSize: [3, 3, 3, 4, 4,
+             4, 4, 5, 5, 5,
+             6, 6, 6, 6, 7,
+             7, 7, 7, 7, 7]
+  description:
+    - >
+      Consecutive attacks with this weapon improve its accuracy; for each attack after the first, add +1 to the attack
+      roll up to a maximum bonus of +3. Reloading or not firing for 1 round resets this bonus.
+    - >
+      As a free action, you can project or retract this weapon's shield which takes damage on top of your shield,
+      armor, and health; this shield has a recharge delay of 2 rounds, a capacity of of ${shieldCapacity[level - 1]}
+      SP, and a recharge rate of ${rechargeRate[level - 1]} SP per turn. However, while the shield is projected, your
+      movement speed is reduced by half.
+  shieldCapacity: [10, 11, 12, 13, 15,
+                   17, 20, 23, 26, 29,
+                   32, 36, 40, 45, 50,
+                   55, 60, 65, 70, 75]
+  rechargeRate: [3, 3, 3, 4, 4,
+                 4, 5, 5, 6, 6,
+                 7, 7, 8, 8, 9,
+                 9, 10, 10, 11, 12]
+- name: 'Mogul'
+  manufacturer: 'Hyperion'
+  type: 'Sniper Rifle'
+  range: '200/400'
+  reloadSpeed: '2 actions'
+  damage: ['1d10', '1d10', '1d10', '1d12', '1d12',
+           '1d12', '2d8', '2d8', '2d8', '2d10',
+           '2d10', '2d12', '2d12', '3d10', '4d8',
+           '4d8', '4d8', '3d12', '3d12', '3d12']
+  clipSize: [4, 4, 4, 5, 5,
+             6, 6, 7, 7, 7,
+             8, 8, 8, 9, 9,
+             9, 9, 10, 10, 10]
+  description:
+    - >
+      Consecutive attacks with this weapon improve its accuracy; for each attack after the first, add +1 to the attack
+      roll up to a maximum bonus of +3. Reloading or not firing for 1 turn resets this bonus.
+    - >
+      As a free action, you can project or retract this weapon's shield which takes damage on top of your shield,
+      armor, and health; this shield has a recharge delay of 2 rounds, a capacity of ${shieldCapacity[level - 1]} SP,
+      and a recharge rate of ${rechargeRate[level - 1]} SP per turn. However, while the shield is projected, your
+      movement speed is reduced by half.
+    - >
+      Additionally, this shield absorbs a quarter of incoming damage as an "amp" bonus to be added to this weapon's
+      next attack. If the shield is withdrawn or breaks, the bonus is lost, and only one bonus can be stored at a time.
+  shieldCapacity: [4, 5, 7, 8, 9,
+                   10, 12, 15, 17, 19,
+                   22, 25, 27, 29, 32,
+                   35, 37, 40, 42, 44]
+  rechargeRate: [1, 1, 2, 2, 2,
+                 2, 3, 3, 3, 3,
+                 4, 4, 5, 5, 6,
+                 7, 7, 8, 8, 9]
+- name: 'Techspert'
+  manufacturer: 'Hyperion'
+  type: 'Sniper Rifle'
+  range: '220/440'
+  reloadSpeed: '2 actions'
+  damage: ['1d8', '1d8', '1d10', '1d10', '1d12',
+           '1d12', '2d8', '2d8', '3d6', '3d6',
+           '2d10', '2d10', '2d12', '2d12', '3d10',
+           '3d10', '3d12', '3d12', '4d10', '4d10']
+  clipSize: [5, 5, 5, 5, 5,
+             6, 6, 6, 6, 6,
+             7, 7, 7, 7, 7,
+             8, 8, 8, 8, 8]
+  description:
+    - >
+      Consecutive attacks with this weapon improve its accuracy; for each attack after the first, add +1 to the attack
+      roll up to a maximum bonus of +3. Reloading or not firing for 1 turn resets this bonus.
+    - >
+      Additionally, as a free action, you can project or retract this weapon's shield which takes damage on top of
+      your shield, armor, and health; this shield has a recharge delay of 2 rounds, a capacity of
+      ${shieldCapacity[level - 1]} SP, and a recharge rate of ${rechargeRate[level - 1]} SP per round. However, while
+      the shield is projected, your movement speed is reduced by half.
+    - >
+      This shield can also absorb ammunition back into its clip. When an attack hits the shield, roll a d100. On a roll
+      of ${96 - level} or higher, the shield takes no damage, and a bullet is added to your clip.
+  shieldCapacity: [4, 5, 7, 8, 9,
+                   10, 12, 15, 17, 19,
+                   22, 25, 27, 29, 32,
+                   35, 37, 40, 42, 44]
+  rechargeRate: [1, 1, 2, 2, 2,
+                 2, 3, 3, 3, 3,
+                 4, 4, 5, 5, 6,
+                 7, 7, 8, 8, 9]

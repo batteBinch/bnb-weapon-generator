@@ -1,0 +1,63 @@
+---
+- name: 'Brr'
+  manufacturer: 'Scav'
+  getElement: |
+    {
+      Element.CRYOGENIC
+    }
+- name: 'Hawt'
+  manufacturer: 'Scav'
+  getElement: |
+    {
+      Element.INCENDIARY
+    }
+- name: 'Kemik'
+  manufacturer: 'Scav'
+  getElement: |
+    {
+      Element.CORROSIVE
+    }
+- name: 'Melty'
+  manufacturer: 'Scav'
+  getElement: |
+    {
+      Element.RADIATION
+    }
+- name: 'Moar'
+  manufacturer: 'Scav'
+  getDescription: |
+    {
+      getDescription() << 'When using the Attack action, make two attacks instead of one; each attack deals half the normal damage, but only one round of ammunition is expended.'
+    }
+- name: 'MOARR' # probably change the effect
+  manufacturer: 'Scav'
+  getDescription: |
+    {
+      getDescription() << 'When using the Attack action, make three attacks instead of one; each attack has a -3 penalty to hit.'
+    }
+- name: 'Pointy'
+  manufacturer: 'Scav'
+  getDescription: |
+    {
+      List<String> meleeDamage = ['1d4', '1d4', '1d4', '1d4', '1d6',
+                                  '1d6', '1d6', '1d6', '1d8', '1d8',
+                                  '1d8', '1d8', '1d10', '1d10', '1d10',
+                                  '1d10', '1d12', '1d12', '1d12', '1d12']
+      getDescription() << "This weapon can also be used to make a melee attack which deals ${meleeDamage[getLevel() - 1]} damage."
+    }
+- name: 'Stabby'
+  manufacturer: 'Scav'
+  getDescription: |
+    {
+      List<String> meleeDamage = ['1d4', '1d4', '1d4', '1d4', '1d6',
+                                  '1d6', '1d6', '1d6', '1d8', '1d8',
+                                  '1d8', '1d8', '1d10', '1d10', '1d10',
+                                  '1d10', '1d12', '1d12', '1d12', '1d12']
+      getDescription() << "This weapon can also be used to make a melee attack which deals ${meleeDamage[getLevel() - 1]} damage."
+    }
+- name: 'Zappy'
+  manufacturer: 'Scav'
+  getElement: |
+    {
+      Element.SHOCK
+    }

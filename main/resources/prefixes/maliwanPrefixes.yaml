@@ -1,0 +1,59 @@
+---
+- name: 'Abundant'
+  manufacturer: 'Maliwan'
+  getClipSize: |
+    {
+      getClipSize() + 2
+    }
+- name: 'Binary'
+  manufacturer: 'Maliwan'
+  getDescription: |
+    {
+      getDescription() << 'When using the Attack action, make two attacks instead of one; each attack deals half the normal damage, but only one round of ammunition is expended.'
+    }
+- name: 'Compressing'
+  manufacturer: 'Maliwan'
+  getReloadSpeed: |
+    {
+      getType() == WeaponType.ROCKET_LAUNCHER
+        ? '1 action'
+        : '1 bonus action'
+    }
+- name: 'Escalating'
+  manufacturer: 'Maliwan'
+  getDescription: |
+    {
+      getDescription() << 'This weapon's damage has a penalty of -2 when fired. For each consequent attack after the first, however, add +1 to the damage up to a maximum of +2. For each turn you do not fire this weapon, this bonus reduces by -1 to a minimum of -2.'
+    }
+- name: 'Hazardous'
+  manufacturer: 'Maliwan'
+  getElement: |
+    {
+      Element.CORROSIVE
+    }
+- name: 'Mocking'
+  manufacturer: 'Maliwan'
+  getDamage: |
+    {
+      String damage = getDamage()
+      try {
+        String element = getElement() as String
+        return "${damage.substring(0, damage.indexOf(element) - 1)} + 2 $element"
+      }
+      catch (MissingMethodException ignored) {
+        return "$damage + 2"
+      }
+    }
+- name: 'Vivid'
+  manufacturer: 'Maliwan'
+  getDamage: |
+    {
+      String damage = getDamage()
+      try {
+        String element = getElement() as String
+        return "${damage.substring(0, damage.indexOf(element) - 1)} + 1 $element"
+      }
+      catch (MissingMethodException ignored) {
+        return "$damage + 1"
+      }
+    }

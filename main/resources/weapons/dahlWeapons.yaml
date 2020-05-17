@@ -1,0 +1,169 @@
+---
+- name: 'Caracal'
+  manufacturer: 'Dahl'
+  type: 'Assault Rifle'
+  range: '90/180'
+  reloadSpeed: '1 action'
+  damage: ['1d8 | 2x4', '1d8 | 2x4', '1d8 | 2x4', '1d10 | 2x5', '1d10 | 2x5',
+           '1d10 | 2x5', '2d6 | 3x4', '2d6 | 3x4', '2d6 | 3x5', '2d8 | 3x5',
+           '2d8 | 2x8', '2d10 | 3x6', '2d10 | 3x6', '3d8 | 4x6', '3d8 | 5x5',
+           '3d10 | 4x7', '3d10 | 5x6', '3d12 | 6x6', '4d10 | 6x7', '4d12 | 6x8']
+  clipSize: [4, 4, 4, 5, 5,
+             5, 6, 6, 6, 7,
+             7, 8, 8, 9, 9,
+             10, 10, 11, 11, 12]
+  description:
+    - >
+      This weapon features two kinds of fire modes: automatic and burst-fire. In automatic mode, you attack as normal,
+      but in burst-fire mode, you make multiple attacks, with each attack that hits dealing a fixed amount of damage.
+      Each attack in burst-fire mode consumes ammunition.
+    - >
+      The notation for burst-fire damage is NxD where N is the number of shots and D is the damage of each shot that
+      hits. You can switch between modes using a free action.
+- name: 'Puma'
+  manufacturer: 'Dahl'
+  type: 'Assault Rifle'
+  range: '65/130'
+  reloadSpeed: '1 action'
+  damage: ['2d4 | 2x4', '2d4 | 2x4', '2d4 | 3x3', '1d10 | 3x3', '1d10 | 2x5',
+           '1d10 | 2x5', '2d6 | 3x4', '2d6 | 3x4', '3d4 | 3x4', '2d8 | 4x4',
+           '2d8 | 4x4', '2d8 | 4x4', '2d10 | 4x5', '2d10 | 4x5', '3d8 | 4x6',
+           '3d8 | 4x6', '3d10 | 5x6', '3d10 | 5x6', '4d8 | 4x8', '6d6 | 5x7']
+  clipSize: [6, 6, 6, 7, 7,
+             7, 8, 8, 9, 9,
+             10, 10, 11, 11, 13,
+             13, 15, 15, 17, 20]
+  description:
+    - >
+      This weapon features two kinds of fire modes: automatic and burst-fire. In automatic mode, you attack as normal,
+      but in burst-fire mode, you make multiple attacks, with each attack that hits dealing a fixed amount of damage.
+      Each attack in burst-fire mode consumes ammunition.
+    - >
+      The notation for burst-fire damage is NxD where N is the number of shots and D is the damage of each shot that
+      hits. You can switch between modes using a free action.
+- name: 'Raptor'
+  manufacturer: 'Dahl'
+  type: 'Pistol'
+  range: '30/60'
+  reloadSpeed: '1 bonus action'
+  damage: ['1d4 | 2x2', '1d4 | 2x2', '1d4 | 2x2', '1d6 | 2x3', '1d6 | 2x3',
+           '1d6 | 3x3', '2d4 | 2x4', '2d4 | 2x4', '2d4 | 2x4', '1d10 | 2x5',
+           '1d10 | 2x5', '1d10 | 2x5', '3d4 | 3x4', '3d4 | 3x4', '3d4 | 3x4',
+           '2d8 | 4x4', '2d8 | 4x4', '2d8 | 4x4', '3d6 | 3x6', '3d6 | 3x6']
+  clipSize: [4, 4, 4, 5, 5,
+             5, 6, 6, 6, 7,
+             7, 7, 7, 8, 8,
+             8, 9, 9, 10, 10]
+  description:
+    - >
+      This weapon features two kinds of fire modes: automatic and burst-fire. In automatic mode, you attack as normal,
+      but in burst-fire mode, you make multiple attacks, with each attack that hits dealing a fixed amount of damage.
+      Each attack in burst-fire mode consumes ammunition.
+    - >
+      The notation for burst-fire damage is NxD where N is the number of shots and D is the damage of each shot that
+      hits. You can switch between modes using a free action.
+- name: 'Falcon'
+  manufacturer: 'Dahl'
+  type: 'Pistol'
+  range: '40/80'
+  reloadSpeed: '1 bonus action'
+  damage: ['1d4 | 2x2', '1d4 | 2x2', '1d4 | 2x2', '1d6 | 2x3', '1d6 | 2x3',
+           '1d6 | 3x3', '1d8 | 2x4', '1d8 | 2x4', '1d8 | 2x4', '1d10 | 2x5',
+           '1d10 | 2x5', '1d10 | 2x5', '1d12 | 2x6', '1d12 | 2x6', '2d8 | 2x8',
+           '2d8 | 2x8', '3d6 | 3x6', '3d6 | 3x6', '2d10 | 2x10', '2d10 | 2x10']
+  clipSize: [3, 3, 3, 3, 4,
+             4, 4, 5, 5, 5,
+             6, 6, 6, 7, 7,
+             7, 8, 8, 9, 9]
+  description:
+    - >
+      This weapon features two kinds of fire modes: automatic and burst-fire. In automatic mode, you attack as normal,
+      but in burst-fire mode, you make multiple attacks, with each attack that hits dealing a fixed amount of damage.
+      Each attack in burst-fire mode consumes ammunition.
+    - >
+      The notation for burst-fire damage is NxD where N is the number of shots and D is the damage of each shot that
+      hits. You can switch between modes using a free action.
+- name: 'Rattler'
+  manufacturer: 'Dahl'
+  type: 'Sniper Rifle'
+  range: '180/360'
+  reloadSpeed: '2 actions'
+  damage: ['2d6 | 3x4', '2d6 | 3x4', '2d8 | 3x5', '2d8 | 3x5', '2d10 | 3x7',
+           '2d10 | 3x7', '3d8 | 3x8', '3d8 | 3x8', '3d10 | 3x10', '3d10 | 3x10',
+           '4d8 | 3x11', '4d8 | 3x11', '3d12 | 3x12', '3d12 | 3x12', '4d10 | 3x13',
+           '4d10 | 3x13', '7d6 | 3x14', '7d6 | 3x14', '6d8 | 3x16', '6d8 | 3x16']
+  clipSize: [3, 3, 3, 3, 3,
+             3, 3, 3, 4, 4,
+             4, 4, 4, 5, 5,
+             5, 5, 6, 6, 6]
+  description:
+    - >
+      This weapon features two kinds of fire modes: automatic and burst-fire. In automatic mode, you attack as normal,
+      but in burst-fire mode, you make multiple attacks, with each attack that hits dealing a fixed amount of damage.
+      Each attack in burst-fire mode consumes ammunition.
+    - >
+      The notation for burst-fire damage is NxD where N is the number of shots and D is the damage of each shot that
+      hits. You can switch between modes using a free action.
+- name: 'Wyrm'
+  manufacturer: 'Dahl'
+  type: 'Sniper Rifle'
+  range: '140/280'
+  reloadSpeed: '2 actions'
+  damage: ['1d12 | 2x5', '1d12 | 2x5', '1d12 | 2x5', '2d8 | 2x5', '2d8 | 2x8',
+           '2d8 | 2x8', '2d10 | 2x9', '2d10 | 3x7', '3d8 | 3x8', '3d8 | 3x8',
+           '3d10 | 3x9', '3d10 | 3x10', '3d12 | 3x11', '3d12 | 4x9', '4d10 | 4x10',
+           '4d10 | 4x10', '4d12 | 4x11', '4d12 | 5x9', '5d10 | 5x10', '5d10 | 5x10']
+  clipSize: [4, 4, 4, 4, 5,
+             5, 5, 5, 6, 6,
+             6, 7, 7, 7, 8,
+             8, 8, 9, 9, 9]
+  description:
+    - >
+      This weapon features two kinds of fire modes: automatic and burst-fire. In automatic mode, you attack as normal,
+      but in burst-fire mode, you make multiple attacks, with each attack that hits dealing a fixed amount of damage.
+      Each attack in burst-fire mode consumes ammunition.
+    - >
+      The notation for burst-fire damage is NxD where N is the number of shots and D is the damage of each shot that
+      hits. You can switch between modes using a free action.
+- name: 'Hyena'
+  manufacturer: 'Dahl'
+  type: 'Submachine Gun'
+  range: '40/80'
+  reloadSpeed: '1 bonus action'
+  damage: ['1d4 | 2x2', '1d6 | 2x2', '1d6 | 2x3', '1d6 | 2x3', '1d8 | 2x4',
+           '1d8 | 2x4', '1d10 | 2x5', '1d10 | 3x4', '2d8 | 3x5', '2d8 | 3x5',
+           '2d8 | 3x6', '2d10 | 3x7', '2d10 | 3x7', '3d8 | 4x6', '3d8 | 4x6',
+           '3d10 | 4x7', '3d10 | 4x7', '4d8 | 4x8', '4d8 | 4x8', '3d12 | 5x7']
+  clipSize: [5, 5, 5, 6, 6,
+             6, 7, 7, 7, 8,
+             8, 8, 9, 9, 10,
+             10, 11, 11, 12, 12]
+  description:
+    - >
+      This weapon features two kinds of fire modes: automatic and burst-fire. In automatic mode, you attack as normal,
+      but in burst-fire mode, you make multiple attacks, with each attack that hits dealing a fixed amount of damage.
+      Each attack in burst-fire mode consumes ammunition.
+    - >
+      The notation for burst-fire damage is NxD where N is the number of shots and D is the damage of each shot that
+      hits. You can switch between modes using a free action.
+- name: 'Jackal'
+  manufacturer: 'Dahl'
+  type: 'Submachine Gun'
+  range: '50/100'
+  reloadSpeed: '1 bonus action'
+  damage: ['1d4 | 2x2', '1d4 | 2x2', '1d6 | 2x3', '1d6 | 3x2', '1d6 | 3x2',
+           '1d8 | 4x2', '2d4 | 4x2', '1d10 | 3x3', '1d10 | 3x4', '3d4 | 4x3',
+           '4d4 | 2x8', '3d6 | 2x9', '3d6 | 2x9', '2d10 | 3x7', '3d8 | 3x8',
+           '4d6 | 3x8', '3d10 | 3x10', '5d6 | 3x10', '4d8 | 4x8', '4d8 | 4x8']
+  clipSize: [7, 7, 7, 7, 7,
+             7, 7, 7, 7, 7,
+             8, 8, 8, 8, 8,
+             9, 9, 9, 9, 9]
+  description:
+    - >
+      This weapon features two kinds of fire modes: automatic and burst-fire. In automatic mode, you attack as normal,
+      but in burst-fire mode, you make multiple attacks, with each attack that hits dealing a fixed amount of damage.
+      Each attack in burst-fire mode consumes ammunition.
+    - >
+      The notation for burst-fire damage is NxD where N is the number of shots and D is the damage of each shot that
+      hits. You can switch between modes using a free action.

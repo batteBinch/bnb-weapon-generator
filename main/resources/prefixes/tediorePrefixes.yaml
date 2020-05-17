@@ -1,0 +1,66 @@
+---
+- name: 'Clearance'
+  manufacturer: 'Tediore'
+  getDescription: |
+    {
+      getDescription() << "For each attack with this weapon, if the natural attack roll is an even number, a round is added back to your $getType() ammunition."
+    }
+- name: 'Firesale'
+  manufacturer: 'Tediore'
+  getElement: |
+    {
+      Element.INCENDIARY
+    }
+- name: 'Frozen'
+  manufacturer: 'Tediore'
+  getElement: |
+    {
+      Element.CRYOGENIC
+    }
+- name: 'Maxed Out'
+  manufacturer: 'Tediore'
+  getDamage: |
+    {
+      String damage = getDamage()
+      try {
+        String element = getElement() as String
+        return "${damage.substring(0, damage.indexOf(element) - 1)} + 2 $element"
+      }
+      catch (MissingMethodException ignored) {
+        return "$damage + 2"
+      }
+    }
+- name: 'Poison'
+  manufacturer: 'Tediore'
+  getElement: |
+    {
+      Element.CORROSIVE
+    }
+- name: 'Precision'
+  manufacturer: 'Tediore'
+  getRange: |
+    {
+      String range = getRange()
+      if (range.matches('\\d+/\\d+'))
+      {
+        int firstIncrement = 5 * Math.round(range.substring(0, range.indexOf('/')) as int * 0.25) as int
+        int secondIncrement = 5 * Math.round(range.substring(range.indexOf('/') + 1) as int * 0.25) as int
+        return firstIncrement + '/' + secondIncrement
+      }
+      else
+      {
+        return 5 * Math.round(range as int * 0.25) as int
+      }
+    }
+- name: 'Rad'
+  manufacturer: 'Tediore'
+  getElement: |
+    {
+      Element.RADIATION
+    }
+- name: 'Supercharged'
+  manufacturer: 'Tediore'
+  getElement: |
+    {
+      Element.SHOCK
+    }

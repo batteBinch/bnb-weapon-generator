@@ -1,0 +1,190 @@
+---
+- name: 'Marshal'
+  manufacturer: 'Jakobs'
+  type: 'Pistol'
+  range: '50/100'
+  reloadSpeed: '1 bonus action'
+  damage: ['1d6', '1d6', '1d6', '1d8', '1d8',
+           '1d10', '1d10', '1d12', '1d12', '1d12',
+           '2d8', '2d8', '1d20', '1d20', '2d12',
+           '2d12', '3d10', '3d10', '3d10', '3d10']
+  clipSize: [3, 3, 3, 4, 4,
+             4, 4, 4, 4, 5,
+             5, 5, 5, 6, 6,
+             6, 6, 6, 6, 6]
+  description:
+    - >
+      This weapon deals a critical hit on a natural roll of ${criticalRoll[(level - 1).intdiv(10)]} or higher.
+      Additionally, critical hits will also cause the bullet to ricochet towards another enemy. On a critical hit,
+      make another attack roll against an enemy of your choice. Critical ricochets can chain.
+  criticalRoll: [19, 18]
+- name: 'Peacekeeper'
+  manufacturer: 'Jakobs'
+  type: 'Pistol'
+  range: '70/140'
+  reloadSpeed: '1 bonus action'
+  damage: ['1d4', '1d4', '1d4', '1d6', '1d6',
+           '1d6', '1d8', '1d8', '1d8', '1d10',
+           '1d10', '1d10', '1d12', '1d12', '1d12',
+           '2d8', '2d8', '2d8', '1d20', '1d20']
+  clipSize: [2, 2, 2, 2, 3,
+             3, 3, 3, 4, 4,
+             4, 4, 5, 5, 5,
+             5, 5, 5, 5, 5]
+  description:
+    - >
+      This weapon deals a critical hit on a natural attack roll of ${criticalRoll[level - 1]} or higher. Additionally,
+      critical hits will also cause the bullet to ricochet towards another enemy. On a critical hit, make another
+      attack roll against an enemy of your choice. Critical ricochets can chain.
+  criticalRoll: [19, 19, 19, 19, 19,
+                 19, 19, 18, 18, 18,
+                 18, 18, 18, 18, 18,
+                 17, 17, 17, 17, 17]
+- name: 'Ranger'
+  manufacturer: 'Jakobs'
+  type: 'Pistol'
+  range: '60/120'
+  reloadSpeed: '1 bonus action'
+  damage: ['1d6', '1d6', '1d6', '1d8', '1d8',
+           '1d10', '1d10', '1d12', '1d12', '1d12',
+           '2d8', '2d8', '2d8', '1d20', '1d20',
+           '1d20', '2d12', '2d12', '2d12', '2d12']
+  clipSize: [3, 3, 3, 3, 3,
+             3, 3, 4, 4, 4,
+             4, 4, 4, 4, 4,
+             5, 5, 5, 5, 5]
+  description:
+    - >
+      This weapon deals a critical hit on a natural attack roll of ${criticalRoll[(level - 1).intdiv(10)]} or higher.
+      Additionally, critical hits will also cause the bullet to ricochet towards another enemy. On a critical hit,
+      make another attack roll against an enemy of your choice. Critical ricochets can chain.
+  criticalRoll: [19, 18]
+- name: 'Repeater'
+  manufacturer: 'Jakobs'
+  type: 'Assault Rifle'
+  range: '80/160'
+  reloadSpeed: '1 action'
+  damage: ['1d8', '1d8', '1d8', '1d8', '1d10',
+           '1d10', '1d10', '1d12', '1d12', '1d12',
+           '2d10', '2d10', '2d10', '2d12', '2d12',
+           '2d12', '3d10', '3d10', '3d12', '3d12']
+  clipSize: [8, 8, 8, 9, 9,
+             9, 9, 9, 10, 10,
+             10, 10, 10, 10, 11,
+             11, 11, 11, 11, 11]
+  description:
+    - >
+      This weapon deals a critical hit on a natural attack roll of ${criticalRoll[level - 1]} or higher. Additionally,
+      critical hits will also cause the bullet to ricochet towards another enemy. On a critical hit, make another
+      attack roll against an enemy of your choice. Critical ricochets can chain.
+  criticalRoll: [19, 19, 19, 18, 18,
+                 18, 18, 18, 18, 18,
+                 17, 17, 17, 17, 17,
+                 16, 16, 16, 16, 16]
+- name: 'Carbine'
+  manufacturer: 'Jakobs'
+  type: 'Assault Rifle'
+  range: '120/240'
+  reloadSpeed: '1 action'
+  damage: ['1d10', '1d10', '1d10', '1d10', '1d12',
+           '1d12', '1d12', '1d12', '2d8', '2d8',
+           '2d8', '2d8', '1d20', '1d20', '1d20',
+           '2d12', '2d12', '3d10', '3d10', '3d10']
+  clipSize: [6, 6, 6, 7, 7,
+             7, 7, 7, 7, 8,
+             8, 8, 8, 8, 8,
+             8, 8, 9, 9, 9]
+  description:
+    - >
+      This weapon deals a critical hit on a natural attack roll of ${criticalRoll[level - 1]} or higher. Additionally,
+      critical hits will also cause the bullet to ricochet towards another enemy. On a critical hit, make another
+      attack roll against an enemy of your choice. Critical ricochets can chain.
+  criticalRoll: [19, 19, 19, 19, 19,
+                 19, 19, 18, 18, 18,
+                 18, 18, 18, 18, 17,
+                 17, 17, 17, 17, 17]
+- name: 'Longrider'
+  manufacturer: 'Jakobs'
+  type: 'Shotgun'
+  range: '50/100'
+  reloadSpeed: '1 action'
+  damage: ['1d8', '1d8', '1d8', '1d10', '1d10',
+           '1d10', '1d12', '1d12', '1d12', '1d20',
+           '1d20', '1d20', '2d12', '2d12', '2d12',
+           '3d10', '3d10', '3d12', '3d12', '3d12']
+  clipSize: [3, 3, 3, 4, 4,
+             4, 4, 4, 4, 4,
+             4, 5, 5, 5, 5,
+             5, 5, 5, 5, 5]
+  description:
+    - >
+      This weapon deals a critical hit on a natural attack roll of ${criticalRoll[level - 1]} or higher. Additionally,
+      critical hits will also cause the bullet to ricochet towards another enemy. On a critical hit, make another
+      attack roll against an enemy of your choice. Critical ricochets can chain.
+  criticalRoll: [19, 19, 19, 19, 19,
+                 19, 19, 19, 18, 18,
+                 18, 18, 18, 18, 18,
+                 18, 17, 17, 17, 17]
+- name: 'Stagecoach'
+  manufacturer: 'Jakobs'
+  type: 'Shotgun'
+  range: '30/60'
+  reloadSpeed: '2 actions'
+  damage: ['1d8', '1d8', '1d10', '1d10', '1d10',
+           '1d12', '1d12', '2d8', '2d8', '1d20',
+           '1d20', '2d12', '2d12', '3d10', '3d10',
+           '3d12', '3d12', '2d20', '2d20', '2d20']
+  clipSize: [1, 1, 1, 1, 1,
+             2, 2, 2, 2, 2,
+             2, 2, 2, 2, 2,
+             3, 3, 3, 3, 3]
+  description:
+    - >
+      This weapon deals a critical hit on a natural attack roll of ${criticalRoll[(level - 1).intdiv(10)]} or higher.
+      Additonally, critical hits will also cause the bullet to ricochet towards another enemy. On a critical hit, make
+      another attack roll against an enemy of your choice. Critical ricochets can chain.
+  criticalRoll: [19, 18]
+- name: 'Callipeen'
+  manufacturer: 'Jakobs'
+  type: 'Sniper Rifle'
+  range: '240/480'
+  reloadSpeed: '2 actions'
+  damage: ['1d10', '1d10', '1d10', '1d10', '1d12',
+           '1d12', '1d12', '2d8', '2d8', '2d8',
+           '1d20', '1d20', '1d20', '2d12', '2d12',
+           '3d10', '3d10', '3d12', '3d12', '3d12']
+  clipSize: [4, 4, 4, 4, 5,
+             5, 5, 5, 5, 5,
+             5, 5, 6, 6, 6,
+             6, 6, 7, 7, 7]
+  description:
+    - >
+      This weapon deals a critical hit on a natural attack roll of ${criticalRoll[level - 1]} or higher. Additionally,
+      critical hits will also cause the bullet to ricochet towards another enemy. On a critical hit, make another
+      attack roll against an enemy of your choice. Critical ricochets can chain.
+  criticalRoll: [19, 19, 19, 19, 18,
+                 18, 18, 18, 18, 18,
+                 18, 17, 17, 17, 17,
+                 16, 16, 16, 16, 16]
+- name: 'Cheechako'
+  manufacturer: 'Jakobs'
+  type: 'Sniper Rifle'
+  range: '80/160'
+  reloadSpeed: '2 actions'
+  damage: ['1d10', '1d10', '1d10', '1d12', '1d12',
+           '1d12', '2d8', '2d8', '1d20', '1d20',
+           '2d12', '2d12', '3d10', '3d10', '3d12',
+           '3d12', '4d10', '4d10', '4d12', '4d12']
+  clipSize: [1, 1, 1, 2, 2,
+             2, 2, 3, 3, 3,
+             3, 3, 3, 4, 4,
+             4, 4, 4, 4, 4]
+  description:
+    - >
+      This weapon deals a critical hit on a natural attack roll of ${criticalRoll[level - 1]} or higher. Additionally,
+      critical hits will also cause the bullet to ricochet towards another enemy. On a critical hit, make another
+      attack roll against an enemy of your choice. Critical ricochets can chain.
+  criticalRoll: [19, 19, 19, 19, 19
+                 19, 19, 18, 18, 18,
+                 18, 18, 18, 18, 17,
+                 17, 17, 17, 17, 17]

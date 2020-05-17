@@ -1,0 +1,59 @@
+---
+- name: 'Pocket Rocket'
+  manufacturer: 'Torgue'
+  type: 'Pistol'
+  range: '15/40'
+  reloadSpeed: '1 bonus action'
+  damage: ['1d6', '1d6', '1d6', '1d8', '1d8',
+           '1d8', '1d10', '1d10', '1d10', '2d6',
+           '2d6', '2d6', '3d6', '3d6', '2d10',
+           '2d10', '3d8', '3d8', '3d10', '3d10']
+  clipSize: [3, 3, 3, 3, 4,
+             4, 4, 4, 4, 4,
+             4, 5, 5, 5, 5,
+             5, 5, 5, 5, 5]
+  description:
+    - >
+      This weapon fires gyro-jets instead of normal bullets. Gyro-jets are rockets fired from normal magazines which
+      explode on impact.
+    - >
+      Additionally, you can use a free action to switch to sticky bomb mode. In this mode, gyro-jets do not explode on
+      impact. Instead, they stick to any surface that they land on. As a reaction, all sticky bombs currently in play
+      can be detonated at once. However, a maximum of 4 sticky bombs can be out at a time.
+    - >
+      When firing sticky bombs at a target, make an attack roll. On a hit, the sticky bomb sticks to the target.
+      Otherwise, the DM will choose a random point where the sticky bomb lands depending on the attack roll.
+    - >
+      When either a gyro-jet or a sticky bomb explodes, all creatures within 5 feet of the explosion must make a
+      Dexterity saving throw. The DC of this saving throw is equal to 8 + your Strength modifier + your proficiency
+      bonus if you are proficient with Pistols. On a fail, a creature takes full damage; otherwise, it only takes half
+      damage.
+- name: 'Carbuncle'
+  manufacturer: 'Torgue'
+  type: 'Pistol'
+  range: '20/50'
+  reloadSpeed: '1 bonus action'
+  damage: ['1d4', '1d4', '1d4', '1d6', '1d6',
+           '1d6', '2d4', '2d4', '2d4', '1d10',
+           '1d10', '1d10', '2d6', '2d6', '2d6',
+           '2d8', '2d8', '2d8', '2d10', '2d10']
+  clipSize: [4, 4, 4, 4, 5,
+             5, 5, 5, 5, 6,
+             6, 6, 6, 6, 6,
+             7, 7, 7, 7, 7]
+  description:
+    - >
+      This weapon fires gyro-jets instead of normal bullets. Gyro-jets are rockets fired from normal magazines which
+      explode on impact.
+    - >
+      Additionally, you can use a free action to switch to sticky bomb mode. In this mode, gyro-jets do not explode on
+      impact. Instead, they stick to any surface that they land on. As a reaction, all sticky bombs currently in play
+      can be detonated at once. However, a maximum of 7 sticky bombs can be out at a time.
+    - >
+      When firing sticky bombs at a target, make an attack roll. On a hit, the sticky bomb sticks to the target.
+      Otherwise, the DM will choose a random point where the sticky bomb lands depending on the attack roll.
+    - >
+      When either a gyro-jet or a sticky bomb explodes, all creatures within 5 feet of the explosion must make a
+      Dexterity saving throw. The DC for this saving throw is equal to 8 + your Strength modifier + your proficiency
+      bonus if you are proficient in Pistols. On a fail, a creature takes full damage; otherwise, it only takes half
+      damage.

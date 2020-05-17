@@ -1,0 +1,119 @@
+---
+- name: 'Ratatater'
+  manufacturer: 'Scav'
+  type: 'Pistol'
+  range: '30/60'
+  damage: ['1d4', '1d4', '1d4', '1d4', '1d4',
+           '1d6', '1d6', '1d6', '1d6', '1d6',
+           '1d8', '1d8', '1d8', '1d10', '1d10',
+           '1d10', '1d12', '1d12', '1d12', '1d12']
+  description:
+    - >
+      This weapon uses ammo directly from your reserves, removing the need to reload. However, if you make a natural
+      attack roll which is below the overheat score, the weapon will overheat and require repair. Furthermore, with
+      each successive attack, the overheat score increases by 1, starting at 1.
+    - >
+      When this weapon overheats, you must spend 1 round to repair this weapon. During this time, the weapon cannot be
+      fired. Additionally, for each round you do not fire this weapon, the overheat score reduces by 1 to a minimum of
+      1.
+- name: 'Donk!'
+  manufacturer: 'Scav'
+  type: '25/50'
+  damage: ['1d4', '1d4', '1d4', '1d4', '1d6',
+           '1d6', '1d6', '1d6', '1d8', '1d8',
+           '1d8', '1d8', '1d10', '1d10', '1d10',
+           '1d12', '1d12', '2d8', '2d8', '2d8']
+  description:
+    - >
+      This weapon uses ammo directly from your reserves, removing the need to reload. However, if you make a natural
+      attack roll which is below the overheat score, the weapon will overheat and require repair. Furthermore, with
+      each successive attack, the overheat score increases by 1, starting at 1.
+    - >
+      When this weapon overheats, you must spend 1 round to repair this weapon. During this time, the weapon cannot be
+      fired. Additionally, for each round you do not fire this weapon, the overheat score reduces by 1 to a minimum of
+      1.
+- name: 'Ender'
+  manufacturer: 'Scav'
+  type: 'Pistol'
+  range: '35/70'
+  damage: ['1d4', '1d4', '1d4', '1d4', '1d6',
+           '1d6', '1d6', '1d6', '2d4', '2d4',
+           '2d4', '1d10', '1d10', '1d10', '4d4',
+           '4d4', '4d4', '3d6', '3d6', '3d6']
+  description:
+    - >
+      This weapon uses ammo directly from your reserves, removing the need to reload. However, if you make a natural
+      attack roll which is below the overheat score, the weapon will overheat and require repair. Furthermore, with
+      each successive attack, the overheat score increases by 1, starting at 2.
+    - >
+      When this weapon overheats, you must spend 1 round to repair this weapon. During this time, the weapon cannot be
+      fired. Additionally, for each round you do not fire this weapon, the overheat score reduces by 1 to a minimum of
+      2.
+- name: 'Purferater'
+  manufacturer: 'Scav'
+  type: 'Assault Rifle'
+  range: '40/80'
+  damage: ['1d6', '1d6', '1d6', '1d8', '1d8',
+           '1d8', '1d10', '1d10', '1d10', '1d12',
+           '1d12', '1d12', '2d8', '2d8', '2d8',
+           '2d10', '2d10', '2d10', '2d12', '2d12']
+  description:
+    - >
+      This weapon uses ammo directly from your reserves, removing the need to reload. However, if you make a natural
+      attack roll which is below the overheat score, the weapon will overheat and require repair. Furthermore, with
+      each successive attack, the overheat score increases by 1, starting at 1.
+    - >
+      When this weapon overheats, you must spend 1 round to repair this weapon. During this time, the weapon cannot be
+      fired. Additionally, for each round you do not fire this weapon, the overheat score reduces by 1 to a minimum of
+      1.
+- name: 'Spinigun'
+  manufacturer: 'Scav'
+  type: 'Assault Rifle'
+  range: '45/90'
+  damage: ['1d6', '1d6', '1d6', '1d8', '1d8',
+           '1d10', '1d10', '1d10', '1d12', '1d12',
+           '1d12', '2d8', '2d8', '2d8', '2d10',
+           '2d10', '2d12', '2d12', '3d10', '3d10']
+  description:
+    - >
+      This weapon uses ammo directly from your reserves, removing the need to reload. However, if you make a natural
+      attack roll which is below the overheat score, the weapon will overheat and require repair. Furthermore, with
+      each successive attack, the overheat score increases by 1, starting at 1.
+    - >
+      When this weapon overheats, you must spend 1 round to repair this weapon. During this time, the weapon cannot be
+      fired. Additionally, for each round you do not fire this weapon, the overheat score reduces by 1 to a minimum of
+      1.
+- name: 'bombabarbardeer'
+  manufacturer: 'Scav'
+  type: 'Assault Rifle'
+  range: '40/80'
+  damage: ['1d6', '1d6', '1d8', '1d8', '1d10',
+           '1d10', '1d12', '1d12', '2d8', '2d8',
+           '2d10', '2d10', '3d8', '3d8', '3d8',
+           '3d10', '3d10', '4d8', '4d8', '4d8']
+  description:
+    - >
+      This weapon uses ammo directly from your reserves, removing the need to reload. However, if you make a natural
+      attack roll which is below the overheat score, the weapon will overheat and require repair. Furthermore, with
+      each successive attack, the overheat score increases by 1, starting at 1.
+    - >
+      When this weapon overheats, you must spend 1 round to repair this weapon. During this time, the weapon cannot be
+      fired. Additionally, for each round you do not fire this weapon, the overheat score reduces by 1 to a minimum of
+      1.
+- name: 'Zooka'
+  manufacturer: 'Scav'
+  type: 'Assault Rifle'
+  range: '50/100'
+  damage: ['1d8', '1d8', '1d8', '1d8', '1d10',
+           '1d10', '1d10', '1d10', '1d12', '1d12',
+           '1d12', '1d12', '3d6', '3d6', '3d6',
+           '3d6', '3d8', '3d8', '3d8', '3d8']
+  description:
+    - >
+      This weapon uses ammo directly from your reserves, removing the need to reload. However, if you make a natural
+      attack roll which is below the overheat score, the weapon will overheat and require repair. Furthermore, with
+      each successive attack, the overheat score increases by 1, starting at 1.
+    - >
+      When this weapon overheats, you must spend 1 round to repair this weapon. During this time, the weapon cannot be
+      fired. Additionally, for each round you do not fire this weapon, the overheat score reduces by 1 to a minimum of
+      1.

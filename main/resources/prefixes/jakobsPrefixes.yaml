@@ -1,0 +1,94 @@
+---
+- name: 'Bloadsoaked'
+  manufacturer: 'Jakobs'
+  getDescription: |
+    {
+      List<String> meleeDamage = ['1d4', '1d4', '1d4', '1d4', '1d6',
+                                  '1d6', '1d6', '1d6', '1d8', '1d8',
+                                  '1d8', '1d8', '1d10', '1d10', '1d10',
+                                  '1d10', '1d12', '1d12', '1d12', '1d12']
+      getDescription() << "This weapon can also be used to make a melee attack which deals ${meleeDamage[getLevel() - 1]} damage."
+    }
+- name: "Cuttin'"
+  manufacturer: 'Jakobs'
+  getDescription: |
+    {
+      List<String> meleeDamage = ['1d4', '1d4', '1d4', '1d4', '1d6',
+                                  '1d6', '1d6', '1d6', '1d8', '1d8',
+                                  '1d8', '1d8', '1d10', '1d10', '1d10',
+                                  '1d10', '1d12', '1d12', '1d12', '1d12']
+      getDescription() << "This weapon can also be used to make a melee attack which deals ${meleeDamage[getLevel() - 1]} damage."
+    }
+- name: 'Deadeye'
+  manufacturer: 'Jakobs'
+  getRange: |
+    {
+      String range = getRange()
+      if (range.matches('\\d+/\\d+'))
+      {
+        int firstIncrement = 5 * Math.round(range.substring(0, range.indexOf('/')) as int * 0.25) as int
+        int secondIncrement = 5 * Math.round(range.substring(range.indexOf('/') + 1) as int * 0.25) as int
+        return firstIncrement + '/' + secondIncrement
+      }
+      else
+      {
+        return 5 * Math.round(range as int * 0.25) as int
+      }
+    }
+- name: 'Quad'
+  manufacturer: 'Jakobs'
+  getRange: |
+    {
+      Integer.toString(5 * Math.round(getRange().replaceAll('/\\d+', '') as int * 0.25) as int)
+    }
+  getDescription: |
+    {
+      getDescription() << 'As an attack, this weapon can target up to 4 creatures within a $getRange() foot cone. However, each attack roll has a -3 penalty.'
+    }
+- name: 'Quickdraw'
+  manufacturer: 'Jakobs'
+  getRange: |
+    {
+      String range = getRange()
+      if (range.matches('\\d+/\\d+'))
+      {
+        int firstIncrement = 5 * Math.round(range.substring(0, range.indexOf('/')) as int * 0.25) as int
+        int secondIncrement = 5 * Math.round(range.substring(range.indexOf('/') + 1) as int * 0.25) as int
+        return firstIncrement + '/' + secondIncrement
+      }
+      else
+      {
+        return 5 * Math.round(range as int * 0.25) as int
+      }
+    }
+- name: "Speedloadin'"
+  manufacturer: 'Jakobs'
+  getReloadSpeed: |
+    {
+      getType() == WeaponType.ROCKET_LAUNCHER
+        ? '1 action'
+        : '1 bonus action'
+    }
+- name: 'Trick'
+  manufacturer: 'Jakobs'
+  getDescription: |
+    {
+      List<String> critDamage = ['1d6', '1d6', '1d8', '1d8', '1d8',
+                                 '1d10', '1d10', '1d10', '1d12', '1d12',
+                                 '1d12', '2d8', '2d8', '2d8', '2d8',
+                                 '2d10', '2d10', '2d10', '2d10', '2d10']
+      getDescription() << "On a critical hit, this weapon deals an additional ${critDamage[getLevel() - 1]} damage."
+    }
+- name: 'Wicked'
+  manufacturer: 'Jakobs'
+  getDamage: |
+    {
+      String damage = getDamage()
+      try {
+        String element = getElement() as String
+        return "${damage.substring(0, damage.indexOf(element) - 1)} + 2 $element"
+      }
+      catch (MissingMethodException ignored) {
+        return "$damage + 2"
+      }
+    }

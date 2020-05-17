@@ -1,0 +1,151 @@
+---
+- name: 'Atomizer'
+  manufacturer: 'Maliwan'
+  type: 'Pistol'
+  range: '25/50'
+  reloadSpeed: '1 bonus action'
+  damage: ['1d4', '1d4', '1d4', '1d6', '1d6',
+           '1d6', '1d8', '1d8', '1d8', '1d10',
+           '1d10', '1d10', '1d12', '1d12', '1d12',
+           '2d8', '2d8', '2d8', '2d10', '2d10']
+  clipSize: [3, 3, 3, 3, 4,
+             4, 4, 4, 5, 5,
+             5, 5, 6, 6, 6,
+             6, 7, 7, 7, 7]
+  description:
+    - As a free action, you can switch this weapon's Elemental type between $element and $secondElement.
+- name: 'Devourer'
+  manufacturer: 'Maliwan'
+  type: 'Pistol'
+  range: '35/70'
+  reloadSpeed: '1 bonus action'
+  damage: ['1d6', '1d6', '1d6', '1d6', '2d4',
+           '2d4', '2d4', '2d4', '1d10', '1d10',
+           '1d10', '1d10', '2d6', '2d6', '2d6',
+           '2d10', '2d10', '2d10', '3d8', '3d8']
+  clipSize: [3, 3, 3, 3, 3,
+             3, 3, 4, 4, 4,
+             4, 4, 4, 4, 5,
+             5, 5, 5, 5, 5]
+  description:
+    - As a free action, you can switch this weapon's Elemental type between $element and $secondElement.
+- name: 'Heliophage'
+  manufacturer: 'Maliwan'
+  type: 'Submachine Gun'
+  range: '30/60'
+  reloadSpeed: '1 bonus action'
+  damage: ['1d6', '1d6', '1d6', '1d8', '1d8',
+           '1d8', '1d10', '1d10', '1d10', '1d12',
+           '1d12', '1d12', '2d8', '2d8', '2d8',
+           '2d10', '2d10', '2d10', '3d8', '3d8']
+  clipSize: [5, 5, 5, 6, 6,
+             6, 7, 7, 7, 8,
+             8, 9, 9, 9, 10,
+             10, 11, 11, 12, 12]
+  description:
+    - As a free action, you can switch this weapon's Elemental type between $element and $secondElement.
+- name: 'Nebula'
+  manufacturer: 'Maliwan'
+  type: 'Submachine Gun'
+  range: '40/80'
+  reloadSpeed: '1 bonus action'
+  damage: ['1d6', '1d6', '1d6', '1d6', '1d8',
+           '1d8', '1d8', '1d8', '1d10', '1d10',
+           '1d12', '1d12', '1d12', '2d8', '2d8',
+           '2d10', '2d10', '2d12', '2d12', '2d12']
+  clipSize: [6, 6, 6, 7, 7,
+             7, 8, 8, 9, 9,
+             10, 10, 11, 11, 12,
+             12, 13, 13, 14, 14]
+  description:
+    - As a free action, you can switch this weapon's Elemental type between $element and $secondElement.
+- name: 'Quasar'
+  manufacturer: 'Maliwan'
+  type: 'Submachine Gun'
+  range: '45/90'
+  reloadSpeed: '45/90'
+  damage: ['1d4', '1d4', '1d6', '1d6', '1d6',
+           '1d8', '1d8', '1d10', '1d10', '1d12',
+           '1d12', '2d8', '2d8', '2d10', '2d10',
+           '2d12', '2d12', '3d10', '3d10', '3d10']
+  clipSize: [3, 3, 3, 4, 4,
+             4, 4, 5, 5, 5,
+             6, 6, 6, 7, 7,
+             7, 8, 8, 8, 8]
+  description:
+    - As a free action, you can switch this weapon's Elemental type between $element and $secondElement.
+- name: 'Cyclotron'
+  manufacturer: 'Maliwan'
+  type: 'Shotgun'
+  range: '20/40'
+  reloadSpeed: '1 action'
+  damage: ['1d10', '1d10', '1d10', '1d12', '1d12',
+           '1d12', '2d8', '2d8', '2d8', '2d10',
+           '2d10', '2d10', '3d8', '3d8', '3d8',
+           '3d10', '3d10', '3d10', '4d8', '4d8']
+  clipSize: [4, 4, 4, 4, 4,
+             4, 4, 5, 5, 5,
+             5, 5, 5, 5, 6,
+             6, 6, 6, 6, 6]
+  description:
+    - As a free action, you can switch this weapon's Elemental type between $element and $secondElement.
+- name: 'Interloper'
+  manufacturer: 'Maliwan'
+  type: 'Shotgun'
+  range: '15/30'
+  reloadSpeed: '2 actions'
+  damage: ['1d8', '1d8', '1d8', '1d10', '1d10',
+           '1d12', '1d12', '1d12', '2d8', '2d8',
+           '2d10', '2d10', '2d12', '2d12', '3d10',
+           '3d10', '3d10', '3d12', '3d12', '3d12']
+  clipSize: [2, 2, 2, 2, 2,
+             3, 3, 3, 3, 3,
+             3, 3, 3, 4, 4,
+             4, 4, 4, 4, 4]
+  description:
+    - As a free action, you can switch this weapon's Elemental type between $element and $secondElement.
+- name: 'Terminator'
+  manufacturer: 'Maliwan'
+  type: 'Shotgun'
+  range: '15/30'
+  reloadSpeed: '1 action'
+  damage: ['2d4', '2d4', '2d4', '1d10', '1d10',
+           '1d10', '3d4', '3d4', '3d4', '4d4',
+           '4d4', '4d4', '3d6', '3d6', '5d4',
+           '5d4', '4d6', '4d6', '5d6', '5d6']
+  clipSize: [4, 4, 4, 5, 5,
+             5, 5, 5, 6, 6,
+             6, 6, 6, 6, 7,
+             7, 7, 7, 7, 7]
+  description:
+    - As a free action, you can switch this weapon's Elemental type between $element and $secondElement.
+- name: 'Proton Rifle'
+  manufacturer: 'Maliwan'
+  type: 'Sniper Rifle'
+  range: '200/400'
+  reloadSpeed: '2 actions'
+  damage: ['2d6', '2d6', '2d6', '2d6', '2d10',
+           '2d10', '2d10', '2d12', '2d12', '2d12',
+           '3d10', '3d10', '3d10', '3d12', '3d12',
+           '3d12', '4d10', '4d10', '7d6', '7d6']
+  clipSize: [1, 1, 1, 1, 1,
+             1, 1, 2, 2, 2,
+             2, 2, 2, 2, 2,
+             3, 3, 3, 3, 3]
+  description:
+    - As a free action, you can switch this weapon's Elemental type between $element and $secondElement.
+- name: 'Antimatter Rifle'
+  manufacturer: 'Maliwan'
+  type: 'Sniper Rifle'
+  range: '220/440'
+  reloadSpeed: '2 actions'
+  damage: ['1d10', '1d10', '1d10', '1d12', '1d12',
+           '2d8', '2d8', '2d10', '2d10', '2d12',
+           '2d12', '3d10', '3d10', '3d10', '4d8',
+           '4d8', '4d8', '3d12', '3d12', '3d12']
+  clipSize: [2, 2, 2, 2, 2,
+             2, 2, 2, 3, 3,
+             3, 3, 3, 3, 4,
+             4, 4, 4, 4, 4]
+  description:
+    - As a free action, you can switch this weapon's Elemental type between $element and $secondElement.

@@ -1,0 +1,120 @@
+---
+- name: 'Adapting'
+  manufacturer: 'Dahl'
+  getDescription: |
+    {
+      getDescription() << 'When using the Attack action, make two attacks instead of one; each attack deals half the normal damage, but only one round of ammunition is expended.'
+    }
+- name: 'Arctic'
+  manufacturer: 'Dahl'
+  getElement: |
+    {
+      Element.CRYOGENIC
+    }
+- name: 'Bladed'
+  manufacturer: 'Dahl'
+  getDescription: |
+    {
+      List<String> meleeDamage = ['1d4', '1d4', '1d4', '1d4', '1d6',
+                                  '1d6', '1d6', '1d6', '1d8', '1d8',
+                                  '1d8', '1d8', '1d10', '1d10', '1d10',
+                                  '1d10', '1d12', '1d12', '1d12', '1d12']
+      getDescription() << "This weapon can also be used to make a melee attack which deals ${meleeDamage[getLevel() - 1]} damage."
+    }
+- name: 'Daunting'
+  manufacturer: 'Dahl'
+  getClipSize: |
+    {
+      getClipSize() + 2
+    }
+- name: 'Dauntless'
+  manufacturer: 'Dahl'
+  getDamage: |
+    {
+      String damage = getDamage()
+      int burstCount = damage.substring(damage.indexOf('|') + 2, damage.indexOf('x')) as int
+      return "${damage.substring(0, damage.indexOf('|') + 2)}${burstCount + 1}${damage.substring(damage.indexOf('x'))}"
+    }
+- name: 'Decaying'
+  manufacturer: 'Dahl'
+  getElement: |
+    {
+      Element.RADIATION
+    }
+- name: 'Disciplined'
+  manufacturer: 'Dahl'
+  getDamage: |
+    {
+      String damage = getDamage()
+      try {
+        String element = getElement().toString()
+        int burstDamage = damage.substring(damage.indexOf('x') + 1, damage.indexOf(element) - 1) as int
+        return "${damage.substring(0, damage.indexOf('x') + 1)}${burstDamage + 1} $element"
+      }
+      catch (MissingMethodException ignored) {
+        int burstDamage = damage.substring(damage.indexOf('x') + 1) as int
+        return "${damage.substring(0, damage.indexOf('x') + 1)}${burstDamage + 1}"
+      }
+    }
+- name: 'Freezing'
+  manufacturer: 'Dahl'
+  getElement: |
+    {
+      Element.CRYOGENIC
+    }
+- name: 'High Capacity'
+  manufacturer: 'Dahl'
+  getClipSize: |
+    {
+      getClipSize() + 2
+    }
+- name: 'Reflexive'
+  manufacturer: 'Dahl'
+  getReloadSpeed: |
+    {
+      getType() == WeaponType.ROCKET_LAUNCHER
+          ? '1 action'
+          : '1 bonus action'
+    }
+- name: 'Relentless'
+  manufacturer: 'Dahl'
+  getReloadSpeed: |
+    {
+      getType() == WeaponType.ROCKET_LAUNCHER
+          ? '1 action'
+          : '1 bonus action'
+    }
+- name: 'Searing'
+  manufacturer: 'Dahl'
+  getElement: |
+    {
+      Element.INCENDIARY
+    }
+- name: 'Shocking'
+  manufacturer: 'Dahl'
+  applyTo: |
+    {
+      Element.SHOCK
+    }
+- name: 'Trained'
+  manufacturer: 'Dahl'
+  getRange: |
+    {
+      String range = getRange()
+      if (range.matches('\\d+/\\d+'))
+      {
+        int firstIncrement = 5 * Math.round(range.substring(0, range.indexOf('/')) as int * 0.25) as int
+        int secondIncrement = 5 * Math.round(range.substring(range.indexOf('/') + 1) as int * 0.25) as int
+        return firstIncrement + '/' + secondIncrement
+      }
+      else
+      {
+        return 5 * Math.round(range as int * 0.25) as int
+      }
+    }
+- name: 'Venonmous'
+  manufacturer: 'Dahl'
+  getElement: |
+    {
+      Element.CORROSIVE
+    }

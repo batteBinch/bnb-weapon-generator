@@ -1,0 +1,13 @@
+---
+- name: 'Cost-Effective'
+  manufacturer: 'Atlas'
+  getDescription: |
+    {
+      getDescription() << 'When using the Attack action, make two attacks instead of one. Each attack that hits deals half the normal damage, but only one round of ammunition is expended.'
+    }
+- name: 'Overencumbered'
+  manufacturer: 'Atlas'
+  getClipSize: |
+    {
+      getClipSize() + 2
+    }

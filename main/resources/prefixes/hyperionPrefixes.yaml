@@ -1,0 +1,63 @@
+---
+- name: 'Bank-Rolled'
+  manufacturer: 'Hyperion'
+  getDescription: |
+    {
+      getDescription() << "Whenever an attack roll is made, roll a d100. On a ${99 - getLevel()} or higher, a bullet is returned back to the clip."
+    }
+- name: 'Bleeding Edge'
+  manufacturer: 'Hyperion'
+  getDescription: |
+    {
+      List<String> = meleeDamage = ['1d4', '1d4', '1d4', '1d4', '1d6',
+                                    '1d6', '1d6', '1d6', '1d8', '1d8',
+                                    '1d8', '1d8', '1d10', '1d10', '1d10',
+                                    '1d10', '1d12', '1d12', '1d12', '1d12']
+      getDescription() << "This weapon can also be used to make a melee attack which deals ${meleeDamage[getLevel() - 1]} damage."
+    }
+- name: 'Cash-Infused'
+  manufacturer: 'Hyperion'
+  getElement: |
+    {
+      Element.SHOCK
+    }
+- name: 'Defrauding'
+  manufacturer: 'Hyperion'
+  getElement: |
+    {
+      Element.SHOCK
+    }
+- name: 'Hostile'
+  manufacturer: 'Hyperion'
+  getElement: |
+    {
+      Element.INCENDIARY
+    }
+- name: 'Popular'
+  manufacturer: 'Hyperion'
+  getClipSize: |
+    {
+      getClipSize() + 2
+    }
+- name: 'Powerhouse'
+  manufacturer: 'Hyperion'
+  getDescription: |
+    {
+      List<String> critDamage = ['1d6', '1d6', '1d8', '1d8', '1d8',
+                                 '1d10', '1d10', '1d10', '1d12', '1d12',
+                                 '1d12', '2d8', '2d8', '2d8', '2d8',
+                                 '2d10', '2d10', '2d10', '2d10', '2d10']
+      getDescription() << "On a critical hit, this weapon deals an additional ${critDamage[getLevel() - 1]} damage."
+    }
+- name: 'Redundant'
+  manufacturer: 'Hyperion'
+  getDescription: |
+    {
+      getDescription() << 'When using the Attack action, make two attacks instead of one; each attack deals half the normal damage, but only one round of ammunition is expended.'
+    }
+- name: 'Undermining'
+  manufacturer: 'Hyperion'
+  getElement: |
+    {
+      Element.RADIATION
+    }

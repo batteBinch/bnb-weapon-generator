@@ -1,0 +1,254 @@
+---
+- name: 'N-System'
+  manufacturer: 'Atlas'
+  type: 'Assault Rifle'
+  range: '80/160'
+  reloadSpeed: '1 action'
+  damage: ['1d8', '1d8', '1d8', '1d10', '1d10',
+           '1d10', '1d12', '1d12', '1d12', '2d8',
+           '2d8', '2d8', '2d10', '2d10', '2d12',
+           '2d12', '3d10', '3d10', '5d6', '5d6']
+  clipSize: [4, 4, 4, 4, 4,
+             5, 5, 5, 5, 6,
+             6, 6, 7, 7, 7,
+             8, 8, 8, 9, 9]
+  description:
+    - >
+      This weapon features an alternative firing mode which shoots a tracker dart. As a free action, you can switch
+      to this mode; the next attack with this weapon will fire a tracker dart instead of a normal bullet.
+    - >
+      This tracker dart deals ${dartDamage[level - 1]} damage, and any enemy which is hit by the dart is also
+      considered "tagged" for 9 rounds.
+    - >
+      When this weapon tags a creature, attacks with this weapon have advantage against that creature but can only
+      target it while it is still tagged. If no creatures are tagged, this weapon can target any creature.
+  dartDamage: ['1d6', '1d6', '1d6', '1d6', '1d8',
+               '1d8', '1d8', '1d8', '1d10', '1d10',
+               '1d10', '1d10', '1d12', '1d12', '1d12',
+               '2d8', '2d8', '2d8', '2d10', '2d10']
+- name: 'Q-System'
+  manufacturer: 'Atlas'
+  type: 'Assault Rifle'
+  range: '60/120'
+  reloadSpeed: '1 action'
+  damage: ['1d6', '1d6', '1d6', '1d8', '1d8',
+           '1d8', '1d10', '1d10', '1d10', '3d4',
+           '3d4', '3d4', '4d4', '4d4', '4d4',
+           '2d10', '2d10', '2d10', '3d8', '3d8']
+  clipSize: [4, 4, 4, 5, 5,
+             5, 6, 6, 7, 7,
+             8, 8, 9, 9, 10,
+             11, 12, 13, 14, 16]
+  description:
+    - >
+      This weapon feature an alternative firing mode which shoots a tracker puck. As a free action, you can switch to
+      this mode, and the next attack with this weapon fill fire a tracker puck up to 30 feet away instead of a normal
+      bullet.
+    - >
+      On impact, a puck detonates in a 5-foot radius, and all creatures within range must make a Dexterity saving
+      throw. The DC for this saving throw is 8 + your Wisdom modifier + your proficiency bonus if you are proficient
+      with Assault Rifles. On a failed save, the creature is considered "tagged" for 6 rounds.
+    - >
+      When a creature is tagged, attacks with this weapon have advantage against that creature but can only target it
+      while it is tagged. If no creatures are tagged, this weapon can target any creature.
+- name: 'V-System'
+  manufacturer: 'Atlas'
+  type: 'Assault Rifle'
+  range: '70/140'
+  reloadSpeed: '1 action'
+  damage: ['1d8', '1d8', '1d8', '1d8', '2d6',
+           '2d6', '2d6', '2d6', '3d6', '3d6',
+           '3d6', '3d6', '2d10', '2d10', '2d10',
+           '2d10', '4d6', '4d6', '4d6', '4d6']
+  clipSize: [3, 3, 4, 4, 5,
+             5, 6, 6, 7, 7,
+             8, 8, 9, 9, 10,
+             10, 11, 11, 12, 12]
+  description:
+    - >
+      This weapon features an alternative firing mode which shoots a tracker grenade. As a free action, you can switch
+      to this mode; the next attack with this weapon will fire a tracker grenade up to 45 feet away instead of a
+      normal bullet.
+    - >
+      A round after impact, the grenade detonates in a 15-foot radius, and all creatures within range must make a
+      Dexterity saving throw. The DC for this saving throw is 8 + your Wisdom modifier + your proficiency bonus if you are proficient with Assault Rifles.
+    - >
+      On a failed save, the creature takes ${grenadeDamage[level - 1]} damage and is considered "tagged" for 5 rounds.
+      On a success, the creature takes half damage and is not considered tagged.
+    - >
+      When a creature is tagged, attacks with this weapon have advantage against that creature but can only target it
+      while it is tagged. If no creatures are tagged, this weapon can target any creature.
+  grenadeDamage: ['1d4', '1d4', '1d4', '1d6', '1d6',
+                  '1d6', '1d8', '1d8', '1d8', '1d10',
+                  '1d10', '1d10', '2d6', '2d6', '2d6',
+                  '4d4', '4d4', '4d4', '5d4', '5d4']
+- name: 'AX-7'
+  manufacturer: 'Atlas'
+  type: 'Pistol'
+  range: '45/90'
+  reloadSpeed: '1 bonus action'
+  damage: ['1d4', '1d4', '1d4', '1d6', '1d6',
+           '1d6', '1d8', '1d8', '1d8', '1d10',
+           '1d10', '1d10', '1d12', '1d12', '1d12',
+           '2d8', '2d8', '2d8', '3d6', '3d6']
+  clipSize: [2, 2, 2, 2, 3,
+             3, 3, 3, 4, 4,
+             4, 4, 5, 5, 5,
+             5, 6, 6, 6, 6]
+  description:
+    - >
+      This weapon features an alternative firing mode which shoots a tracker dart. As a free action, you can switch to
+      this mode; the next attack with this weapon will fire a tracker dart instead of a normal bullet.
+    - >
+      This tracker dart deals ${dartDamage[level - 1]} damage and is considered "tagged" for 5 rounds.
+    - >
+      When this weapon tags any creature, attacks with this weapon have advantage against that creature but can only
+      target it while it is still tagged. If no creatures are tagged, this weapon can target any creature.
+  dartDamage: ['1d4', '1d4', '1d4', '1d4', '1d4',
+               '1d6', '1d6', '1d6', '1d6', '1d6',
+               '1d8', '1d8', '1d8', '1d8', '1d10',
+               '1d10', '1d10', '1d10', '1d12', '1d12']
+- name: 'AX-19'
+  manufacturer: 'Atlas'
+  type: 'Pistol'
+  range: '35/70'
+  reloadSpeed: '1 bonus action'
+  damage: ['1d4', '1d4', '1d4', '1d6', '1d6',
+           '1d6', '1d8', '1d8', '1d8', '2d4',
+           '2d4', '2d4', '1d10', '1d10', '1d10',
+           '3d4', '3d4', '3d4', '2d8', '2d8']
+  clipSize: [3, 3, 3, 3, 3,
+             4, 4, 4, 4, 4,
+             5, 5, 5, 5, 6,
+             6, 6, 7, 7, 7]
+  description:
+    - >
+      This weapon features an alternative firing mode which shoots a tracker puck. As a free action, you can switch to
+      this mode; the next attack with this weapon will fire a tracker puck up to 35 feet away instead of a normal
+      bullet.
+    - >
+      On impact, the puck detonates in a 5-foot radius, and all creatures within range must make a Dexterity saving
+      throw. The DC for this saving throw is 8 + your Wisdom modifier + your proficiency bonus if you are proficient
+      with Assault rifles. On a failed save, the creature is considered "tagged" for 3 rounds.
+    - >
+      When a creature is tagged, attacks with this weapon have advantage against that creature but can only target it
+      while it is tagged. If no creatures are tagged, this weapon can target any creature.
+- name: 'AX-88'
+  manufacturer: 'Atlas'
+  type: 'Pistol'
+  range: '30/60'
+  reloadSpeed: '1 bonus action'
+  damage: ['1d4', '1d4', '1d4', '1d4', '1d8',
+           '1d8', '1d8', '1d8', '1d12', '1d12',
+           '1d12', '1d12', '2d8', '2d8', '2d8',
+           '2d8', '2d10', '2d10', '2d10', '2d10']
+  clipSize: [2, 2, 2, 2, 3,
+             3, 3, 3, 4, 4,
+             4, 5, 5, 5, 6,
+             6, 7, 7, 8, 8]
+  description:
+    - >
+      This weapon features an alternative firing mode which shoots a tracker grenade. As a free action, you can switch
+      to this mode; the next attack with this weapon will fire a tracker grenade up to 45 feet away instead of a
+      normal bullet.
+    - >
+      A round after impact, the grenade detonates in a 15-foot radius, and all creatures within range must make a
+      Dexterity saving throw. The DC for this saving throw is 8 + your Wisdom modifier + your proficiency bonus if you
+      are proficient with Assault Rifles.
+    - >
+      On a failed save, the creature takes ${grenadeDamage[level - 1]} damage and is considered "tagged" for 5 rounds.
+      On a success, the creature takes half damage and is not considered tagged.
+    - >
+      When a creature is tagged, attacks with this weapon have advantage against that creature but can only target it
+      while it is tagged. If no creatures are tagged, this weapon can target any creature.
+  grenadeDamage: ['1d4', '1d4', '1d4', '1d6', '1d6',
+                  '1d6', '1d8', '1d8', '1d8', '1d10',
+                  '1d10', '1d10', '2d6', '2d6', '2d6',
+                  '4d4', '4d4', '4d4', '5d4', '5d4']
+- name: 'Pattern Black'
+  manufacturer: 'Atlas'
+  type: 'Rocket Launcher'
+  range: '45'
+  reloadSpeed: '2 actions'
+  rocketSpeed: '10'
+  damage: ['2d10', '2d10', '2d10', '3d8', '3d8',
+           '3d8', '4d6', '4d6', '4d6', '3d10',
+           '3d10', '3d10', '3d12', '3d12', '3d12',
+           '5d8', '5d8', '5d8', '4d12', '4d12']
+  clipSize: [1, 1, 1, 1, 1,
+             1, 1, 2, 2, 2,
+             2, 2, 2, 2, 3,
+             3, 3, 3, 3, 3]
+  description:
+    - >
+      This weapon features an alternative firing mode which shoots a tracker dart. As a free action,
+      you can switch to this mode; the next attack with this weapon will fire a tracker dart which
+      acts like a bullet with a range of 60/120 and consumes 1 assault rifle ammo.
+    - >
+      This tracker dart deals ${dartDamage[level - 1]} damage, and any enemy which is hit is also
+      considered "tagged" for 6 rounds.
+    - >
+      When this weapon tags any creature, rockets will move their full speed directly to the creature
+      rather than moving in a straight line.
+  dartDamage: ['1d3', '1d3', '1d3', '1d8', '1d8',
+               '1d8', '1d10', '1d10', '1d10', '1d12',
+               '1d12', '1d12', '2d8', '2d8', '2d8',
+               '3d6', '3d6', '3d6', '2d10', '2d10']
+- name: 'Pattern Red'
+  manufacturer: 'Atlas'
+  type: 'Rocket Launcher'
+  range: '60'
+  reloadSpeed: '2 actions'
+  rocketSpeed: '5'
+  damage: ['3d6', '3d6', '3d6', '5d4', '5d4',
+           '5d4', '3d8', '3d8', '3d8', '5d6',
+           '5d6', '5d6', '4d8', '4d8', '4d8',
+           '6d6', '6d6', '6d6', '4d10', '4d10']
+  clipSize: [1, 1, 1, 1, 1,
+             1, 2, 2, 2, 2,
+             2, 2, 3, 3, 3,
+             3, 3, 3, 4, 4]
+  description:
+    - >
+      This weapon features an alternative firing mode which shoots a tracker puck. As a free action, you can switch to
+      this mode; the next attack with this weapon will fire a tracker puck up to 45 feet away instead of a normal
+      bullet.
+    - >
+      On impact, the puck detonates in a 5-foot radius, and all creatures within range must make a Dexterity saving
+      throw. The DC for this saving throw is 8 + your Wisdom modifier + your proficiency bonus if you are proficient
+      with Assault Rifles. On a failed save, the creature is considered "tagged" for 6 rounds.
+    - >
+      When this weapon tags any creature, rockets will move their full speed directly to the creature rather than
+      moving in a straight line.
+- name: 'Pattern (NULL)'
+  manufacturer: 'Atlas'
+  type: 'Rocket Launcher'
+  range: '60'
+  reloadSpeed: '2 actions'
+  rocketSpeed: '5'
+  damage: ['3d8', '3d8', '3d8', '3d8', '3d10',
+           '3d10', '3d10', '3d10', '4d8', '4d8',
+           '4d8', '4d8', '3d12', '3d12', '3d12',
+           '3d12', '4d10', '4d10', '4d10', '4d10']
+  clipSize: [1, 1, 1, 1, 1,
+             1, 2, 2, 2, 2,
+             2, 3, 3, 3, 3,
+             3, 4, 4, 4, 4]
+  description:
+    - >
+      This weapon features an alternative firing mode which shoots a tracker grenade. As a free action, you can switch
+      to this mode; the next attack with this weapon will fire a tracker grenade up to 45 feet away.
+    - >
+      A round after impact, the grenade detonates in a 15-foot radius, and all creatures within range must make a
+      Dexterity saving throw. The DC for this saving throw is 8 + your Wisdom modifier + your proficiency bonus if you
+      are proficient with Assault Rifles.
+    - >
+      On a failed save, the creature takes ${grenadeDamage[level - 1]} damage and is considered "tagged" for 5 rounds.
+      On a success, the creature takes half damage and is not considered tagged.
+    - >
+      When this weapon tags any creature, rockets will move their full speed directly to the creature rather than
+      moving in a straight line.
+  grenadeDamage: ['1d4', '1d4', '1d4', '1d6', '1d6',
+                  '1d6', '1d8', '1d8', '1d8', '1d10',
+                  '1d10', '1d10', '2d6', '2d6', '2d6',
+                  '4d4', '4d4', '4d4', '5d4', '5d4']

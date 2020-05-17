@@ -1,0 +1,198 @@
+---
+- name: 'Lurkshot'
+  manufacturer: 'Tediore'
+  type: 'Pistol'
+  range: '25/50'
+  reloadSpeed: '1 bonus action'
+  damage: ['1d4', '1d4', '1d4', '1d4', '1d6',
+           '1d6', '1d6', '1d6', '2d4', '2d4',
+           '2d4', '1d10', '1d10', '1d10', '3d4',
+           '3d4', '4d4', '4d4', '5d4', '5d4']
+  clipSize: [2, 2, 2, 3, 3,
+             3, 3, 3, 4, 4,
+             4, 4, 5, 5, 5,
+             5, 5, 6, 6, 6]
+  description:
+    - >
+      To reload this weapon, you simply need to throw it away, and a fully-loaded one will digistruct in your hands.
+    - >
+      When reloading, this weapon can be thrown up to 30 feet, where it explodes upon impact. Enemies within 10 feet of
+      the explosion must make a Dexterity saving throw. The DC of this saving throw is equal to 8 + your Strength
+      modifier + your proficiency bonus (if you are proficient in Pistols).
+    - >
+      On a fail, a creature takes damage equal to 2 times the number of bullets left in the clip, or 5 damage if there
+      ammunition left. On a success, only half damage is taken.
+- name: 'Sureshot'
+  manufacturer: 'Tediore'
+  type: 'Pistol'
+  range: '45/90'
+  reloadSpeed: '1 bonus action'
+  damage: ['1d4', '1d4', '1d4', '1d4', '1d6',
+           '1d6', '1d6', '1d6', '1d8', '1d8',
+           '1d8', '1d10', '1d10', '1d10', '1d12',
+           '1d12', '1d12', '2d8', '2d8', '2d8']
+  clipSize: [4, 4, 4, 5, 5,
+             6, 6, 7, 7, 8,
+             8, 9, 9, 10, 10,
+             11, 11, 12, 12, 12]
+  description:
+    - >
+      To reload this weapon, you simply need to throw it away, and a fully-loaded one will digistruct in your hands.
+    - >
+      When reloaded, this weapon can be thrown up to 30 feet. Upon landing, it acts as a mobile turret with a movement
+      speed of 20 feet.
+    - >
+      This turret acts on your initiative order and can only move and use the attack action. When this turret attacks,
+      uses the remaining ammunition in the clip when it was thrown. A thrown weapon will not turn into a mobile turret
+      if one is already out.
+    - >
+      Once the clip is empty, the turret deconstructs itself. Additionally, if the turret is thrown with no ammunition
+      its clip, it instead explodes like a grenade on impact, dealing 5 damage in a 5-foot radius.
+- name: 'Excellerator'
+  manufacturer: 'Tediore'
+  type: 'Submachine Gun'
+  range: '40/80'
+  reloadSpeed: '1 bonus action'
+  damage: ['1d4', '1d4', '1d4', '1d6', '1d6',
+           '1d6', '2d4', '2d4', '2d4', '1d10',
+           '1d10', '1d10', '3d4', '3d4', '3d4',
+           '4d4', '4d4', '4d4', '5d4', '5d4']
+  clipSize: [7, 7, 7, 8, 8,
+             8, 9, 9, 10, 10,
+             11, 11, 12, 12, 13,
+             13, 14, 14, 15, 15]
+  description:
+    - >
+      To reload this weapon, you simply need to throw it away, and a fully-loaded one will digistruct in your hands.
+    - >
+      When reloaded, this weapon can be thrown up to 30 feet. Upon landing, it acts as a mobile turret with a movement
+      speed of 20 feet.
+    - >
+      This turret acts on your initiative order and can only move and use the attack action. When this turret attacks,
+      it uses the remaining ammunition in the clip when it was thrown. A thrown weapon will not turn into a mobile
+      turret if one is already out.
+    - >
+      Once the clip is empty, the turret deconstructs itself. Additionally, if the turret is thrown with no ammunition
+      in its clip, it instead explodes like a grenade on impact, dealing 5 damage in a 5-foot radius.
+- name: 'Keenfire'
+  manufacturer: 'Tediore'
+  type: 'Submachine Gun'
+  range: '35/70'
+  reloadSpeed: '1 bonus action'
+  damage: ['1d4', '1d4', '1d6', '1d6', '1d6',
+           '1d6', '1d8', '1d8', '1d8', '1d10',
+           '1d10', '1d10', '1d12', '1d12', '2d8',
+           '2d8', '2d8', '2d10', '2d10', '2d10']
+  clipSize: [5, 5, 5, 5, 6,
+             6, 6, 7, 7, 7,
+             8, 8, 8, 9, 9,
+             9, 10, 10, 11, 11]
+  description:
+    - >
+      To reload this weapon, you simply need to throw it away, and a fully-loaded one will digistruct in your hands.
+    - >
+      When reloading, this weapon can be thrown up to 30 feet, where it explodes upon impact. Enemies within 10 feet of
+      explosion must make a Dexterity saving throw. The DC of this saving throw is equal to 8 + your Strength modifier
+      + your proficiency bonus (if you are proficient in Pistols).
+    - >
+      On a fail, a creature takes damage equal to 1.5 times the number of bullets left in the clip, or 5 damage if
+      there is no ammunition left. On a success, only half damage is taken.
+- name: 'Kill-O-Matic'
+  manufacturer: 'Tediore'
+  type: 'Submachine Gun'
+  range: '45/90'
+  reloadSpeed: '1 bonus action'
+  damage: ['1d4', '1d4', '1d6', '1d6', '1d8',
+           '1d8', '1d8', '1d10', '1d10', '1d10',
+           '2d6', '2d6', '2d8', '2d8', '2d8',
+           '2d10', '2d10', '3d8', '3d8', '3d8']
+  clipSize: [7, 7, 7, 8, 8,
+             8, 9, 9, 10, 10,
+             11, 11, 12, 12, 13,
+             13, 14, 14, 15, 15]
+  description:
+    - >
+      To reload this weapon, you simply need to throw it away, and a fully-loaded one will digistruct in your hands.
+    - >
+      When reloading, this weapon can be thrown up to 30 feet where it mounts to the surface it lands on and acts as a
+      sentry gun. This gun can mount to any surface and can be upside-down as well.
+    - >
+      Any time a creature ends their turn within the first range increment of this sentry, the sentry can make an
+      attack against it, if desired. It attacks using the ammunition left in the magazine before it was thrown.
+    - >
+      A thrown weapon will not mount into a sentry if a sentry is already out. When a sentry has 0 ammunition in its
+      magazine, it deconstructs. Furthermore, if this weapon is thrown with no ammunition in its clip, it explodes like
+      a grenade, dealing 5 damage in a 5-foot radius.
+- name: 'Everblast'
+  manufacturer: 'Tediore'
+  type: 'Shotgun'
+  range: '30/60'
+  reloadSpeed: '1 bonus action'
+  damage: ['1d6', '1d6', '1d6', '2d4', '2d4',
+           '2d4', '1d10', '1d10', '2d6', '2d6',
+           '4d4', '4d4', '2d10', '2d10', '3d8',
+           '3d8', '3d10', '3d10', '3d12', '3d12']
+  clipSize: [4, 4, 4, 5, 5,
+             5, 6, 6, 6, 7,
+             7, 7, 8, 8, 8,
+             9, 9, 9, 10, 10]
+  description:
+    - >
+      To reload this weapon, you simply need to throw it away, and a fully-loaded one will digistruct in your hands.
+    - >
+      When reloading, this weapon can be thrown up to 30 feet where it mounts to the surface it lands on and acts as a
+      sentry gun. This gun can mount to any surface and can be upside-down as well.
+    - >
+      Any time a creature ends their turn within the first range increment, the sentry can make an attack against it if
+      desired. It attacks using the ammunition left in the magazine before it was thrown.
+    - >
+      A thrown weapon will not mount into a sentry if a sentry is already out. When a sentry has 0 ammunition in its
+      magazine, it deconstructs. Furthermore, if this weapon is thrown with no ammunition in its clip, it explodes like
+      a grenade, dealing 5 damage in a 5-foot radius.
+- name: 'Fastblast'
+  manufacturer: 'Tediore'
+  type: 'Shotgun'
+  range: '40/80'
+  reloadSpeed: '1 bonus action'
+  damage: ['1d6', '1d6', '1d6', '1d6', '2d4',
+           '2d4', '2d4', '2d4', '1d10', '1d10',
+           '2d6', '2d6', '2d8', '2d8', '2d10',
+           '2d10', '2d10', '4d6', '4d6', '4d6']
+  clipSize: [5, 5, 6, 6, 6,
+             7, 7, 7, 8, 8,
+             8, 8, 9, 9, 9,
+             9, 10, 10, 10, 10]
+  description:
+    - >
+      To reload this weapon, you simply need to throw it away, and a fully-loaded one will digistruct in your hands.
+    - >
+      When reloaded, this weapon can be thrown up to 30 feet. Upon landing, it acts as a mobile turret with a movement
+      speed of 20 feet.
+    - >
+      This turret acts on your initiative order and can only move and use the attack action. When this turret attacks,
+      it uses the remaining ammunition in the clip when it was thrown. A thrown weapon will not turn into a mobile
+      turret if one is already out.
+    - >
+      Once the clip is empty, the turret deconstructs itself. Additionally, if the turret is thrown with no ammunition
+      in its clip, it instead explodes like a grenade on impact, dealing 5 damage in a 5-foot radius.
+- name: 'Powerblast'
+  manufacturer: 'Tediore'
+  type: 'Shotgun'
+  range: '25/50'
+  reloadSpeed: '1 bonus action'
+  damage: ['1d6', '1d6', '1d6', '1d8', '1d8',
+           '1d10', '1d10', '2d6', '2d6', '2d6',
+           '2d10', '2d10', '3d8', '3d8', '3d10',
+           '3d10', '3d10', '4d8', '4d8', '4d8']
+  clipSize: [4, 4, 4, 5, 5,
+             5, 6, 6, 6, 6,
+             7, 7, 7, 7, 8,
+             8, 8, 8, 8, 8]
+  description:
+    - >
+      When reloading, this weapon can be thrown up to 30 feet, where it explodes upon impact. Enemies within 10 feet of
+      the explosion must make a Dexterity saving throw. The DC of this saving throw is equal to 8 + your Strength
+      modifier + your proficiency bonus (if you are proficient in Pistols).
+    - >
+      On a fail, a creature takes damage equal to 2 times the number of bullets left in the clip, or 5 damage if there
+      is no ammunition left. On a success, only half damage is taken.

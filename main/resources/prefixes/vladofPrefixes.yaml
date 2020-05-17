@@ -1,0 +1,80 @@
+---
+- name: 'Annexed'
+  manufacturer: 'Vladof'
+  getDescription: |
+    {
+      getDescription() << 'When using the Attack action, make two attacks instead of one; each attack deals half the normal damage, but only one round of ammunition is expended.'
+    }
+- name: 'Engulfing'
+  manufacturer: 'Vladof'
+  getDescription: |
+    {
+      List<String> description = getDescription()
+      if (getName() != 'Burzum' && getName() != 'Bratchny') {
+        description << 'This weapon also has a rocket-powered bipod for stabilization. As a free action, you can kick out the bipod.'
+        description << 'While the bipod is out, the rapid-fire penalty is reduced by -$penalty every other turn instead of every turn. However, your movement speed is also halved.'
+      }
+      return description
+    }
+- name: 'Molten'
+  manufacturer: 'Vladof'
+  getElement: |
+    {
+      Element.INCENDIARY
+    }
+- name: 'Negating'
+  manufacturer: 'Vladof'
+  getElement: |
+    {
+      Element.CRYOGENIC
+    }
+- name: 'Nuclear'
+  manufacturer: 'Vladof'
+  getElement: |
+    {
+      Element.RADIATION
+    }
+- name: 'Otchky'
+  manufacturer: 'Vladof'
+  getRange: |
+    {
+      String range = getRange()
+      if (range ==~ '\\d+/\\d+')
+      {
+        int firstIncrement = 5 * Math.round(range.substring(0, range.indexOf('/')) as int * 0.25) as int
+        int secondIncrement = 5 * Math.round(range.substring(range.indexOf('/') + 1) as int * 0.25) as int
+        return firstIncrement + '/' + secondIncrement
+      }
+      else
+      {
+        return 5 * Math.round(range as int * 0.25) as int
+      }
+    }
+- name: 'Pestilent'
+  manufacturer: 'Vladof'
+  getElement: |
+    {
+      Element.CORROSIVE
+    }
+- name: 'Storming'
+  manufacturer: 'Vladof'
+  getElement: |
+    {
+      Element.SHOCK
+    }
+- name: 'Unending'
+  manufacturer: 'Vladof'
+  getClipSize: |
+    {
+      getClipSize() + 2
+    }
+- name: 'Vicious'
+  manufacturer: 'Vladof'
+  getDescription: |
+    {
+      List<String> meleeDamage = ['1d4', '1d4', '1d4', '1d4', '1d6',
+                                  '1d6', '1d6', '1d6', '1d8', '1d8',
+                                  '1d8', '1d8', '1d10', '1d10', '1d10',
+                                  '1d10', '1d12', '1d12', '1d12', '1d12']
+      getDescription() << "This weapon can also be used to make a melee attack which deals ${meleeDamage[getLevel() - 1]} damage."
+    }

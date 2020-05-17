@@ -1,0 +1,109 @@
+---
+- name: 'Burning'
+  manufacturer: 'Torgue'
+  getElement: |
+    {
+      Element.INCENDIARY
+    }
+- name: 'Casual'
+  manufacturer: 'Torgue'
+  getDamage: |
+    {
+      String damage = getDamage()
+      try {
+        String element = getElement() as String
+        return "${damage.substring(0, damage.indexOf(element) - 1)} + 2 $element"
+      }
+      catch (MissingMethodException ignored) {
+        return "$damage + 2"
+      }
+    }
+- name: 'Cocky'
+  manufacturer: 'Torgue'
+  getRange: |
+    {
+      String range = getRange()
+      if (range.matches('\\d+/\\d+'))
+      {
+        int firstIncrement = 5 * Math.round(range.substring(0, range.indexOf('/')) as int * 0.25) as int
+        int secondIncrement = 5 * Math.round(range.substring(range.indexOf('/') + 1) as int * 0.25) as int
+        return firstIncrement + '/' + secondIncrement
+      }
+      else
+      {
+        return 5 * Math.round(range as int * 0.25) as int
+      }
+    }
+- name: 'Double-Penetrating'
+  manufacturer: 'Torgue'
+  getDescription: |
+    {
+      getDescription() << 'When using the Attack action, make two attacks instead of one; each attack deals half the normal damage, but only one round of ammunition is expended.'
+    }
+- name: 'Gratifying'
+  manufacturer: 'Torgue'
+  getClipSize: |
+    {
+      getClipSize() + 2
+    }
+- name: 'Itchy'
+  manufacturer: 'Torgue'
+  getElement: |
+    {
+      Element.RADIATION
+    }
+- name: 'Nasty'
+  manufacturer: 'Torgue'
+  # TODO: complete this
+- name: 'Oozing'
+  manufacturer: 'Torgue'
+  getElement: |
+    {
+      Element.CORROSIVE
+    }
+- name: "Packin'"
+  manufacturer: 'Torgue'
+  getClipSize: |
+    {
+      getClipSize() + 3
+    }
+- name: 'Shrinking'
+  manufacturer: 'Torgue'
+  getElement: |
+    {
+      Element.CRYOGENIC
+    }
+- name: 'Stimulating'
+  manufacturer: 'Torgue'
+  getElement: |
+    {
+      Element.SHOCK
+    }
+- name: 'Shredded'
+  manufacturer: 'Torgue'
+  getDamage: |
+    {
+      String damage = getDamage()
+      try {
+        String element = getElement() as String
+        return "${damage.substring(0, damage.indexOf(element) - 1)} + 2 $element"
+      }
+      catch (MissingMethodException ignored) {
+        return "$damage + 2"
+      }
+    }
+- name: 'Stuffed'
+  manufacturer: 'Torgue'
+  # TODO: complete this
+- name: 'Triple'
+  manufacturer: 'Torgue'
+  getDescription: |
+    {
+      getDescription() << 'The damage this weapon deals ignores the resistances of armor.'
+    }
+- name: 'Triple-Penetrating'
+  manufacturer: 'Torgue'
+  getDescription: |
+    {
+      getDescription() << 'This weapon can penetrate up to 3 enemies in a line. For each subsequent enemy after the first, make an attack roll with disadvantage; a miss will cancel any subsequent attacks.'
+    }
