@@ -11,9 +11,21 @@ import weapon.*
  *
  * @author Sasha Price
  */
-class WeaponGenerator {
+class Generator {
+    /**
+     * Parses markdown text for conversion into HTML.
+     */
     private static final Parser PARSER = Parser.builder().build()
+
+    /**
+     * Converts parsed markdown text into HTML format.
+     */
     private static final HtmlRenderer RENDERER = HtmlRenderer.builder().build()
+
+    /**
+     * Parses text from YAML files into a Closure for dynamic method overriding in Prefix.
+     */
+    private static final GroovyShell closureConverter = new GroovyShell()
 
     /**
      * A Map containing all the parsed YAML Weapons grouped by Manufacturer
@@ -39,7 +51,7 @@ class WeaponGenerator {
     /**
      * The random number generator for Weapon generation
      */
-    private static final Random GENERATOR = new Random()
+    private static final Random RANDOM = new Random()
 
     /**
      * Determines whether the fields of this class have been initialized
@@ -57,14 +69,14 @@ class WeaponGenerator {
         static Object asType(String self, Class c) {
             c in WEAPON_ENUMS
                     ? c.get(self)
-                    : DEFAULT_CONVERTER(self, c)
+                    : DEFAULT_CONVERTER.call(self, c)
         }
     }
 
     /**
      * Intentionally left blank to hide the default constructor
      */
-    private WeaponGenerator() {
+    private Generator() {
     }
 
     /**
@@ -78,13 +90,13 @@ class WeaponGenerator {
             initialize()
         }
 
-        Manufacturer manufacturer = randomItem(Manufacturer.values() as List<Manufacturer>)
+        Manufacturer manufacturer = nextItem(Manufacturer.values() as List<Manufacturer>)
 
-        Weapon weapon = extractWeapon(randomItem(YAML_WEAPONS[manufacturer]))
+        Weapon weapon = extractWeapon(nextItem(YAML_WEAPONS[manufacturer]))
         weapon.level = level
         weapon.rarity = rarity
 
-        Prefix prefix = extractPrefix(randomItem(YAML_PREFIXES[manufacturer]))
+        Prefix prefix = extractPrefix(nextItem(YAML_PREFIXES[manufacturer]))
 
         weapon.prefix = prefix
 
@@ -129,7 +141,6 @@ class WeaponGenerator {
         prefix.manufacturer = yamlPrefix.manufacturer as Manufacturer
 
         // Gets additional properties from yamlPrefix
-        GroovyShell closureConverter = new GroovyShell()
         for (String key : yamlPrefix.keySet().removeAll(PREFIX_FIELDS)) {
             prefix.methods[key] = closureConverter.evaluate(yamlPrefix[key] as String) as Closure
         }
@@ -141,8 +152,8 @@ class WeaponGenerator {
      * @param items the List to pick from
      * @return a random item from the List
      */
-    private static <T> T randomItem(List<T> items) {
-        items[GENERATOR.nextInt(items.size())]
+    private static <T> T nextItem(List<T> items) {
+        items[RANDOM.nextInt(items.size())]
     }
 
     /**
